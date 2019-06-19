@@ -7,7 +7,7 @@ export default function OurStory({ state, actions }) {
      <div class="row">
      <div class="col-md-6">
       <h5 class="title">Our story</h5>
-      <h1 > Cooking is the story of ajustment</h1>
+      <h2 > Cooking is the story of ajustment</h2>
       <p>
        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos iure nisi nobis, assumenda asperiores.
       </p>
