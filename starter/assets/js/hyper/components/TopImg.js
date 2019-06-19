@@ -1,8 +1,10 @@
+
+
 import { h, app } from "hyperapp";
 
-export default function TopImg({ state, actions }) {
+export default function OurStory({ state, actions }) {
   return (
-    <section class="TopImg">
+    <section id="TopImg">
     <div class="container">
     <div class="title">
     <h5>

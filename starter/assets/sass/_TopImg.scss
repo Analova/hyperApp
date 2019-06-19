@@ -1,8 +1,7 @@
-.TopImg {
+#TopImg {
   position: relative;
   background: black;
   height: 500px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))),url('https://www.mucbook.de/wp-content/uploads/2018/08/vegan_essen_muenchen.jpg');
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://www.mucbook.de/wp-content/uploads/2018/08/vegan_essen_muenchen.jpg');
   background-size: cover;
   background-position: center;

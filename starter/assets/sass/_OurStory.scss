@@ -1,0 +1,56 @@
+#OurStory {
+  padding: 100px 0;
+
+  h5 {
+    color: grey;
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1rem;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    margin: 0.5rem 0 2rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    color: grey;
+    line-height: 1.8;
+    margin: 0.5rem 0 3rem;
+  }
+
+  .quote {
+    color: grey;
+    margin: 0.5rem 0 3rem;
+
+    strong {
+      font-weight: 700;
+      color: #000;
+    }
+  }
+
+  .res-btn {
+    padding: 20px 40px;
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background: orange;
+    }
+  }
+
+  .video-img {
+    max-width: 400px;
+    height: 550px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('https://zerogeorge.com/wp-content/uploads/2017/08/ZeroGeorge_Cooking-School_EricKelley-1568x824-c-default.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
