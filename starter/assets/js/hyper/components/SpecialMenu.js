@@ -6,10 +6,10 @@ export default function SpecialMenu({ state, actions }) {
   return (
     <section id="SpecialMenu">
       <div class="container">
-        <h5 class="tittle"> Special Menu</h5>
+        <h5 class="title"> Special Menu</h5>
         <h2>Delicious Flavor of Autom</h2>
-          <div class="row boxes">
-          <div class="col-md-4">
+          <div class="row  boxes">
+          <div class="col-md-4 ">
           <div class="box">
            <div class="box-img">
               <div class="price-circle">$25</div>
@@ -36,8 +36,9 @@ export default function SpecialMenu({ state, actions }) {
                <p class="details"> Fried eggs, fried vegitables, patato or french fries, salad</p>
           </div>
           </div>
-      <a href="#" class="link" >View Full Menu</a>
+
       </div>
+      <a href="#" class="link" >View Full Menu</a>
      </div>
     </section>
   );

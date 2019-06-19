@@ -1,6 +1,6 @@
 #SpecialMenu {
   padding: 100px 0;
-  background: #fafafa;
+  background: #f7f7f7;
   // background-image: url("https://mediacdn.bellacor.com/images/500/238801WF36323.jpg");
   // // background-size: cover;
   // background-position: center;
@@ -60,12 +60,12 @@
 
   .boxes {
     padding-bottom: 50px;
-    text-align: center;
-    display: inline-block;
   }
 
   a.link {
     color: black;
     text-decoration: none;
+    text-align: center;
+    display: block;
   }
 }

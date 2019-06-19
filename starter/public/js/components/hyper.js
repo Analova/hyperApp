@@ -44,7 +44,7 @@ var _Header = __webpack_require__(4);
 
 var _Header2 = _interopRequireDefault(_Header);
 
-var _TopImg = __webpack_require__(7);
+var _TopImg = __webpack_require__(8);
 
 var _TopImg2 = _interopRequireDefault(_TopImg);
 
@@ -52,9 +52,13 @@ var _OurStory = __webpack_require__(5);
 
 var _OurStory2 = _interopRequireDefault(_OurStory);
 
-var _SpecialMenu = __webpack_require__(6);
+var _SpecialMenu = __webpack_require__(7);
 
 var _SpecialMenu2 = _interopRequireDefault(_SpecialMenu);
+
+var _RandomQuote = __webpack_require__(6);
+
+var _RandomQuote2 = _interopRequireDefault(_RandomQuote);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -68,7 +72,8 @@ function App(_ref) {
     (0, _hyperapp.h)(_Header2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_TopImg2.default, { state: state, actions: actions }),
     (0, _hyperapp.h)(_OurStory2.default, { state: state, actions: actions }),
-    (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions })
+    (0, _hyperapp.h)(_SpecialMenu2.default, { state: state, actions: actions }),
+    (0, _hyperapp.h)(_RandomQuote2.default, { state: state, actions: actions })
   );
 }
 // <Header state={state} actions={actions}/>
@@ -232,6 +237,46 @@ function OurStory(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.default = RandomQuote;
+
+var _hyperapp = __webpack_require__(0);
+
+function RandomQuote(_ref) {
+  var state = _ref.state,
+      actions = _ref.actions;
+
+  return (0, _hyperapp.h)(
+    "section",
+    { id: "RandomQuote", style: {
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('https://s3-ap-southeast-2.amazonaws.com/macquarie-ish-oncourse/9390f6ef-6c5f-4e92-babd-05fecaf77b41')"
+      } },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h1",
+        null,
+        "\" For me cooking is an extension of love. \""
+      ),
+      (0, _hyperapp.h)(
+        "span",
+        { "class": "author" },
+        " -Johny-"
+      )
+    )
+  );
+}
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.default = SpecialMenu;
 
 var _hyperapp = __webpack_require__(0);
@@ -248,7 +293,7 @@ function SpecialMenu(_ref) {
       { "class": "container" },
       (0, _hyperapp.h)(
         "h5",
-        { "class": "tittle" },
+        { "class": "title" },
         " Special Menu"
       ),
       (0, _hyperapp.h)(
@@ -258,10 +303,10 @@ function SpecialMenu(_ref) {
       ),
       (0, _hyperapp.h)(
         "div",
-        { "class": "row boxes" },
+        { "class": "row  boxes" },
         (0, _hyperapp.h)(
           "div",
-          { "class": "col-md-4" },
+          { "class": "col-md-4 " },
           (0, _hyperapp.h)(
             "div",
             { "class": "box" },
@@ -339,19 +384,19 @@ function SpecialMenu(_ref) {
               " Fried eggs, fried vegitables, patato or french fries, salad"
             )
           )
-        ),
-        (0, _hyperapp.h)(
-          "a",
-          { href: "#", "class": "link" },
-          "View Full Menu"
         )
+      ),
+      (0, _hyperapp.h)(
+        "a",
+        { href: "#", "class": "link" },
+        "View Full Menu"
       )
     )
   );
 }
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -424,7 +469,7 @@ function OurStory(_ref) {
 }
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -466,4 +511,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 });
 
 /***/ })
-],[8]);
+],[9]);
