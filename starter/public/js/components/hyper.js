@@ -111,9 +111,72 @@ var companyInfo = {
   location: "Fnkfurt am Main, Germany"
 };
 
+var specialMenuData = [{
+  title: "Super Delicios Tofu With Rice",
+  description: "Fried eggs, fried vegitables, patato or french fries, salad",
+  price: 15
+}, {
+  title: "Roll Springs",
+  description: "Fried eggs, fried vegitables, patato or french fries, salad",
+  price: 25
+}, {
+  title: "Coconut Tofu",
+  description: "Fried eggs, fried vegitables, patato or french fries, salad",
+  price: 30
+}];
+
+var reviewsData = [{
+  company: "The Food Network",
+  author: "Lilly Lorenz ",
+  authorInfo: "Winner Of The Chef Masters",
+  quote: "Best Restaurants in Frankfurt",
+  review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos ."
+}, {
+  company: "HBO",
+  author: "Jane Wiess ",
+  authorInfo: "Winner Of The Chef Masters",
+  quote: "Best Restaurants in Frankfurt",
+  review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos ."
+}, {
+  company: "CWD",
+  author: "Mike Complle ",
+  authorInfo: "Winner Of The Chef Masters",
+  quote: "Best Restaurants in Frankfurt",
+  review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos ."
+}, {
+  company: "MBC ",
+  author: "Daline Johnson ",
+  authorInfo: "Winner Of The Chef Masters",
+  quote: "Best Restaurants in Frankfurt",
+  review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos ."
+}, {
+  company: "CNN",
+  author: "Bill Jordon ",
+  authorInfo: "Winner Of The Chef Masters",
+  quote: "Best Restaurants in Frankfurt",
+  review: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos ."
+}];
+
+var randomQuoteData = [{
+  author: "Johny",
+  quote: " For Me Cooking Is An Extension Of Love. "
+}, {
+  author: "Mike",
+  quote: "Cooking and baking is both physical and mental therapy."
+}, {
+  author: "Ciny",
+  quote: "One of the most meditative times of my day is when I'm cooking."
+}];
+
 var globalState = exports.globalState = {
   count: 0,
-  companyInfo: companyInfo
+  companyInfo: companyInfo,
+  specialMenuData: specialMenuData,
+  reviewsData: reviewsData,
+  randomQuoteData: randomQuoteData,
+  reviewStatus: {
+    currentReview: 1
+  }
 };
 
 /***/ }),
@@ -535,6 +598,50 @@ function Reviews(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+  var currentReview = function currentReview() {
+    return (0, _hyperapp.h)(
+      "div",
+      null,
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "title" },
+        "Reviews"
+      ),
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        " ",
+        state.reviewsData[state.reviewStatus.currentReview].company,
+        " "
+      ),
+      (0, _hyperapp.h)(
+        "h4",
+        null,
+        state.reviewsData[state.reviewStatus.currentReview].quote
+      ),
+      (0, _hyperapp.h)(
+        "p",
+        null,
+        " ",
+        state.reviewsData[state.reviewStatus.currentReview].review
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "author" },
+        (0, _hyperapp.h)(
+          "strong",
+          null,
+          state.reviewsData[state.reviewStatus.currentReview].author
+        ),
+        " - ",
+        (0, _hyperapp.h)(
+          "em",
+          null,
+          state.reviewsData[state.reviewStatus.currentReview].authorInfo
+        )
+      )
+    );
+  };
   return (0, _hyperapp.h)(
     "section",
     { id: "Reviews" },
@@ -556,41 +663,7 @@ function Reviews(_ref) {
         (0, _hyperapp.h)(
           "div",
           { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "h5",
-            { "class": "title" },
-            "Reviews"
-          ),
-          (0, _hyperapp.h)(
-            "h2",
-            null,
-            " The Food's Masters Say About Us "
-          ),
-          (0, _hyperapp.h)(
-            "h4",
-            null,
-            "\"Best Restaurants in Berlin\""
-          ),
-          (0, _hyperapp.h)(
-            "p",
-            null,
-            " Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos iure nisi nobis maiores in eaque iste eos iure nisi nobis."
-          ),
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "author" },
-            (0, _hyperapp.h)(
-              "strong",
-              null,
-              "Lilly Lorenz"
-            ),
-            " - ",
-            (0, _hyperapp.h)(
-              "em",
-              null,
-              "winner of the chef masters"
-            )
-          ),
+          currentReview(),
           (0, _hyperapp.h)(
             "div",
             { "class": "arrows" },
@@ -602,6 +675,36 @@ function Reviews(_ref) {
     )
   );
 }
+
+// export default function Reviews({ state, actions }) {
+//   return (
+//     <section id="Reviews">
+//     <div class="container">
+//     <div class="row">
+//     <div class="col-md-8 ">
+//     <div class="side-img">
+//       <img src="https://bloximages.chicago2.vip.townnews.com/tucson.com/content/tncms/assets/v3/editorial/4/39/439be31e-143a-5001-94f7-92c4eac3c94b/5aff1bf141b6c.image.jpg?resize=1200%2C785"/>
+//     </div>
+//     </div>
+//
+//     <div class="col-md-4">
+//     <h5 class="title">Reviews</h5>
+//       <h2> The Food's Masters Say About Us </h2>
+//     <h4>"Best Restaurants in Berlin"</h4>
+//     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo reiciendis nemo laudantium doloribus maiores in eaque iste eos iure nisi nobis maiores in eaque iste eos iure nisi nobis.</p>
+//     <div class="author"><strong>Lilly Lorenz</strong> - <em>winner of the chef masters</em></div>
+//     <div class="arrows">
+//     <i class="fas fa-arrow-left "></i>
+//     <i class="fas fa-arrow-right ready"></i>
+//     </div>
+//     </div>
+//
+//
+//     </div>
+//     </div>
+//     </section>
+//   );
+// }
 
 /***/ }),
 /* 10 */
@@ -621,6 +724,41 @@ function SpecialMenu(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+
+  var loopMenu = function loopMenu() {
+    return state.specialMenuData.map(function (item) {
+      return (0, _hyperapp.h)(
+        "div",
+        { "class": "col-md-4 " },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "box" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "box-img" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "price-circle" },
+              "$",
+              item.price
+            )
+          ),
+          (0, _hyperapp.h)(
+            "span",
+            { "class": "title" },
+            " ",
+            item.title
+          ),
+          (0, _hyperapp.h)(
+            "p",
+            { "class": "details" },
+            " ",
+            item.description
+          )
+        )
+      );
+    });
+  };
   return (0, _hyperapp.h)(
     "section",
     { id: "SpecialMenu" },
@@ -640,87 +778,7 @@ function SpecialMenu(_ref) {
       (0, _hyperapp.h)(
         "div",
         { "class": "row  boxes" },
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4 " },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-img" },
-              (0, _hyperapp.h)(
-                "div",
-                { "class": "price-circle" },
-                "$25"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "title" },
-              " Super Delicios Tofu With Rice"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "details" },
-              " Fried eggs, fried vegitables, patato or french fries, salad"
-            )
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-img" },
-              (0, _hyperapp.h)(
-                "div",
-                { "class": "price-circle" },
-                "$25"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "title" },
-              " Super Delicios Tofu With Rice"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "details" },
-              " Fried eggs, fried vegitables, patato or french fries, salad"
-            )
-          )
-        ),
-        (0, _hyperapp.h)(
-          "div",
-          { "class": "col-md-4" },
-          (0, _hyperapp.h)(
-            "div",
-            { "class": "box" },
-            (0, _hyperapp.h)(
-              "div",
-              { "class": "box-img" },
-              (0, _hyperapp.h)(
-                "div",
-                { "class": "price-circle" },
-                "$25"
-              )
-            ),
-            (0, _hyperapp.h)(
-              "span",
-              { "class": "title" },
-              " Super Delicios Tofu With Rice"
-            ),
-            (0, _hyperapp.h)(
-              "p",
-              { "class": "details" },
-              " Fried eggs, fried vegitables, patato or french fries, salad"
-            )
-          )
-        )
+        loopMenu()
       ),
       (0, _hyperapp.h)(
         "a",
