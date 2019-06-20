@@ -104,8 +104,16 @@ function App(_ref) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var companyInfo = {
+  title: "Gracias Madre",
+  phone: "(765)-981-165-097",
+  location: "Fnkfurt am Main, Germany"
+};
+
 var globalState = exports.globalState = {
-  count: 0
+  count: 0,
+  companyInfo: companyInfo
 };
 
 /***/ }),
@@ -154,7 +162,7 @@ function ContactUs(_ref) {
             (0, _hyperapp.h)(
               "div",
               { "class": "title" },
-              "Frankfurt am Main, Germany"
+              state.companyInfo.location
             ),
             (0, _hyperapp.h)(
               "h6",
@@ -741,6 +749,7 @@ function OurStory(_ref) {
   var state = _ref.state,
       actions = _ref.actions;
 
+  console.log(state.companyInfo.title);
   return (0, _hyperapp.h)(
     "section",
     { id: "TopImg" },
@@ -758,7 +767,7 @@ function OurStory(_ref) {
         (0, _hyperapp.h)(
           "h1",
           null,
-          "Gracias Madre"
+          state.companyInfo.title
         )
       ),
       (0, _hyperapp.h)(
@@ -771,7 +780,7 @@ function OurStory(_ref) {
           (0, _hyperapp.h)(
             "h2",
             null,
-            "(765)-981-165-097"
+            state.companyInfo.phone
           )
         ),
         (0, _hyperapp.h)(
@@ -816,7 +825,7 @@ var _App2 = _interopRequireDefault(_App);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _hyperapp.app)({
-  state: { globalState: _globalState.globalState },
+  state: _globalState.globalState,
   view: function view(state, actions) {
     return (0, _hyperapp.h)(_App2.default, { state: state, actions: actions });
   },

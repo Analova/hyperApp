@@ -3,6 +3,7 @@
 import { h, app } from "hyperapp";
 
 export default function OurStory({ state, actions }) {
+  console.log(state.companyInfo.title)
   return (
     <section id="TopImg">
     <div class="container">
@@ -12,7 +13,7 @@ export default function OurStory({ state, actions }) {
     </h5>
 
     <h1>
-    Gracias Madre
+  {state.companyInfo.title}
     </h1>
     </div>
 
@@ -21,7 +22,7 @@ export default function OurStory({ state, actions }) {
 
 <div class="booking">
 Book Table Directly
-<h2>(765)-981-165-097</h2>
+<h2>{state.companyInfo.phone}</h2>
 </div>
 
 <div class="hours">

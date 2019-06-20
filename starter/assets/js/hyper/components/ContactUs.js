@@ -13,7 +13,7 @@ export default function ContactUs({ state, actions }) {
 
       <div class="col-md-6">
        <div class="title">
-      Frankfurt am Main, Germany
+      {state.companyInfo.location}
        </div>
 
        <h6 class="address">
