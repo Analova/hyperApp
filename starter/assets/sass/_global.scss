@@ -11,17 +11,25 @@ h2 {
 
 h5 {
   color: $titleColor;
-  font-size: 0.7rem;
+  font-size: 1rem;
   margin: 0.5rem 0 1rem;
   text-transform: uppercase;
   letter-spacing: 5px;
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: $paraColor;
-  line-height: 1.8;
+  line-height: 2;
   margin: 0.5rem 0 3rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
 }
 
 a {
