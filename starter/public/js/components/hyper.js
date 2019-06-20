@@ -124,7 +124,97 @@ function ContactUs(_ref) {
   return (0, _hyperapp.h)(
     "section",
     { id: "ContactUs" },
-    (0, _hyperapp.h)("div", { "class": "container" })
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container" },
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "title" },
+        " Contact Us"
+      ),
+      (0, _hyperapp.h)(
+        "h2",
+        null,
+        "Delicious Flavor of Autom"
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "box" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "row" },
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "col-md-6" },
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "title" },
+              "Frankfurt am Main, Germany"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              { "class": "address" },
+              "Street address: Europa-Allee 50",
+              (0, _hyperapp.h)("br", null),
+              "60327 Frankfurt am Main, Germany"
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              (0, _hyperapp.h)(
+                "strong",
+                null,
+                " email:"
+              ),
+              " ",
+              (0, _hyperapp.h)(
+                "a",
+                { href: "mailto:info@graciasmadre.com" },
+                "info@graciasmadre.com"
+              )
+            )
+          ),
+          (0, _hyperapp.h)(
+            "div",
+            { "class": "col-md-6" },
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Phone: "
+            ),
+            (0, _hyperapp.h)(
+              "div",
+              { "class": "title" },
+              "(+49)765-098-1920"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Lunch service: "
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              " Friday , Sunday , Saturday: Bookings ",
+              (0, _hyperapp.h)("br", null),
+              "from 12pm to 1:30pm"
+            ),
+            (0, _hyperapp.h)(
+              "h6",
+              null,
+              "Dinner service: "
+            ),
+            (0, _hyperapp.h)(
+              "p",
+              null,
+              " Daily: Bookings ",
+              (0, _hyperapp.h)("br", null),
+              "from 6pm to 9:30pm"
+            )
+          )
+        )
+      )
+    )
   );
 }
 
