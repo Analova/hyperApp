@@ -26,8 +26,8 @@ export default function Reviews({ state, actions }) {
     <div class="col-md-4">
     {currentReview ()}
     <div class="arrows">
-    <i class="fas fa-arrow-left "></i>
-    <i class="fas fa-arrow-right ready"></i>
+    <i class={`fas fa-arrow-left ${(state.reviewStatus.currentReview >0 )? `ready` : ``}`}></i>
+    <i class= {`fas fa-arrow-right ${(state.reviewStatus.currentReview == (state.reviewsData.length)-1)? `` : `ready`}`}></i>
     </div>
     </div>
 

@@ -175,7 +175,7 @@ var globalState = exports.globalState = {
   reviewsData: reviewsData,
   randomQuoteData: randomQuoteData,
   reviewStatus: {
-    currentReview: 1
+    currentReview: 4
   }
 };
 
@@ -667,8 +667,8 @@ function Reviews(_ref) {
           (0, _hyperapp.h)(
             "div",
             { "class": "arrows" },
-            (0, _hyperapp.h)("i", { "class": "fas fa-arrow-left " }),
-            (0, _hyperapp.h)("i", { "class": "fas fa-arrow-right ready" })
+            (0, _hyperapp.h)("i", { "class": "fas fa-arrow-left " + (state.reviewStatus.currentReview > 0 ? "ready" : "") }),
+            (0, _hyperapp.h)("i", { "class": "fas fa-arrow-right " + (state.reviewStatus.currentReview == state.reviewsData.length - 1 ? "" : "ready") })
           )
         )
       )

@@ -84,6 +84,6 @@ export const globalState = {
   reviewsData,
   randomQuoteData,
   reviewStatus: {
-    currentReview: 1,
+    currentReview: 4,
 }
 }
